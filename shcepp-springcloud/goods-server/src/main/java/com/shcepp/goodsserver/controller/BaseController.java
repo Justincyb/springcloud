@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class BaseController {
 
-    @Value("${neo.hello}")
+    @Value("${hello}")
     private String hello;
-    @Value("${neo.name}")
+    @Value("${name}")
     private String name;
 
     @RequestMapping("/hello")

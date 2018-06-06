@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bus-server" />
+        <module name="config-client" />
+        <module name="config-server" />
+        <module name="eureka-server" />
+        <module name="goods-server" />
+        <module name="member-server" />
+        <module name="order-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bus-server" target="1.8" />
+      <module name="config-client" target="1.8" />
+      <module name="config-server" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="goods-server" target="1.8" />
+      <module name="member-cli" target="1.8" />
+      <module name="member-server" target="1.8" />
+      <module name="order-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,41 @@
+#官网原话：Bootstrap properties are added with high precedence, so they cannot be overridden by local configuration, by default.
+#server.port=8081
+# Git仓库中的配置文件要与name一致,例如(config-client-dev.properties,config-client-test.properties)
+#spring.application.name=conf-cli
+#eureka.client.service-url.defaultZone=http://localhost:1001/eureka/
+#spring.cloud.config.label=master
+#spring.cloud.config.profile=dev
+#必须设为true,否则还是会从 http://localhost:8888 获取配置
+#spring.cloud.config.discovery.enabled=true
+#spring.cloud.config.discovery.service-id=config-server
+#设为true，如果无法连接config server，启动时会抛异常，并停止服务
+#spring.cloud.config.failFast=true
+#关闭权限验证
+#management.security.enabled=false
+#显示每个服务实例发送的所有事件和所有的ack
+#spring.cloud.bus.trace.enabled=true
+
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+    bus:
+      trace:
+        enabled: true
+  application:
+    name: conf-cli
+server:
+  port: 8081
+
+#服务注册中心注册地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+management:
+  security:
+    enabled: false

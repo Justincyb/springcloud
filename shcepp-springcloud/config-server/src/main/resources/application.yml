@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+     config:
+       label: master
+       server:
+         jdbc:
+           sql: SELECT `KEY`, `VALUE` from PROPERTIES where APPLICATION=? and PROFILE=? and LABEL=?
+           order: 0
+         default-label: master
+  profiles:
+    active: jdbc
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/config-db?useSSL=false
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+
+ # 以git为配置仓库
+ # cloud:
+ #   config:
+ #     server:
+ #       git:
+ #         uri: https://github.com/Justincyb/springcloud
+ #         searchPaths: /config-repo
+ #         username: Justincyb
+ #         password: qwert12345
+ #     label: master
+
+
+
+
+
+server:
+  port: 8080
+
+#服务注册中心注册地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+    healthcheck:
+      enabled: true
+management:
+  security:
+    enabled: false
+
+

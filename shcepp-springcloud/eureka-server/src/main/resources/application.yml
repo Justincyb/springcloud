@@ -1,0 +1,14 @@
+server:
+  port: 1001
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: localhost
+management:
+  security:
+    enabled: false
+    #暴露注册中心地址
+    #serviceUrl:
+    #     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

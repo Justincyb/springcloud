@@ -24,8 +24,8 @@ spring:
  #       git:
  #         uri: https://github.com/Justincyb/springcloud
  #         searchPaths: /config-repo
- #         username: Justincyb
- #         password: qwert12345
+ #         username: *******
+ #         password: *******
  #     label: master
 
 
